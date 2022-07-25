@@ -1,15 +1,16 @@
-const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
+const path = require('path')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require("copy-webpack-plugin")
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
     mode: "development", 
     entry: "./src/index.js",
     output: {
         filename: "[name].[hash:4].js", 
-        path: path.resolve( __dirname,"dist" ),
+        path: path.resolve( __dirname,"build" ),
     },
     devServer: {
         port: 7001,
@@ -25,6 +26,7 @@ module.exports = {
             { from: "./src/assets", to: "./static" },
             ],
         }),
+        new FaviconsWebpackPlugin('./src/assets/favicon.png'), 
     ],
     module: {
         rules: [

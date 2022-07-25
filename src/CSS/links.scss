@@ -1,0 +1,26 @@
+@import './index.scss';
+
+.link-box{
+    width: 140px;
+    display: flex;
+    align-items: center;
+    padding: 3px 4px;
+    border-radius: 5px;
+    border: 2px solid $green;
+    background-color: transparent;
+    transition: all 200ms ease;
+    .icon {
+        color: $green;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+    .link-text{
+        color: $text-light;
+        font-weight: 600;
+        font-size: 0.8rem;
+        margin-left: 5px;
+    }
+    &:hover{
+        transform: scale(1.15);
+    }
+}
