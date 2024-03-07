@@ -1,0 +1,25 @@
+@import './index.scss';
+
+.burger-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    .burger-icon{
+        color: $green;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    .rotate{
+        transform: rotate(45deg);
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 576px) {
+    .burger-box{
+        display: none;
+    }
+}

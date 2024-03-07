@@ -1,0 +1,42 @@
+@import './index.scss';
+
+.summary {
+    padding: 1rem;
+    padding-top: 60px;
+    position: relative;
+    background-color: transparent;
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        .about-box{
+            flex: 2;
+            z-index: 10;
+            .about{ 
+                font-weight: 400;
+                letter-spacing: 2px;
+                line-height: 2;
+            }
+        }
+        @media (min-width: 576px) {
+            .about-box{
+                padding: 0 1rem 1rem 0;
+            }
+        }
+        .skills-box{
+            flex: 1;
+            z-index: 10;
+        }
+        @media (min-width: 576px) {
+            .skills-box{
+                padding: 0 0 1rem 1rem;
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        .wrapper{
+            flex-direction: row;
+        }
+    }
+}
+

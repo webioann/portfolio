@@ -1,0 +1,54 @@
+@import './index.scss';
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+    .contacts-field {
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+        width: 100%;
+        .box {
+            display: flex;
+            padding: 0.25rem 0.5rem;
+            width: 100%;
+            transition: all 200ms linear;
+            .icon {
+                color: $green;
+                font-size: 1.3rem;
+                cursor: pointer;
+            }
+            p {
+                padding-left: 0.5rem;
+            }
+            &:hover {
+                color: inherit;
+            }
+        }
+    }
+}
+@media (min-width: 576px) {
+    .contacts {
+        .contacts-field {
+            bottom: 1rem;
+            position: absolute;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .box {
+                width: 50%;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .contacts {
+        .contacts-field {
+            bottom: 3rem;
+            .box {
+                width: 33.3333%;
+            }
+        }
+    }
+}

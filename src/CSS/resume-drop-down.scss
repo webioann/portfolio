@@ -1,0 +1,84 @@
+@import './index.scss';
+
+.resume-links{
+    position: relative;
+    .resume-button{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        span{
+            font-weight: 700;
+            padding: 5px 10px;
+        }
+        .jump-arrow{
+            display: grid;
+            border-bottom: 2px solid white;
+            .arrow{
+                animation: jump 1000ms linear infinite;
+            }
+        }
+        @keyframes jump {
+            0%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(-4px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+    
+    }
+    .resume-button:hover{
+        .jump-arrow{
+            border-bottom: 2px solid $green;
+            .arrow{
+                color: $green;
+            }
+        }
+    }
+    .resume-drop-down{
+        position: absolute;
+        bottom: 0;
+        left: 120px;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        a{
+            padding: 0 1rem;
+            white-space: nowrap;
+            margin-top: 10px;
+            border-radius: 5px;
+            background-color: $grey;
+            color: $text-light;
+            box-shadow: 0px 0px 5px 5px rgba(255,255,255,0.2);
+            transition: all 200ms;
+            &:hover{
+                color: $green;
+            }
+        }
+    }
+    @media (min-width: 576px) {
+        .resume-drop-down{
+            top: 40px;
+            left: 0;
+        }
+    }
+    .show{
+        display: flex;
+        flex-direction: column;
+        visibility: visible;
+        opacity: 0;
+        animation: smoth 800ms linear forwards;
+    }
+    @keyframes smoth {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+}
