@@ -1,0 +1,16 @@
+export const skills_data = [
+    { title: 'React JS', id: 1, delay: '400ms', textEng: 'text for tooltip' },
+    { title: 'Next JS', id: 2, delay: '700ms', textEng: 'text for tooltip' },
+    { title: 'React Native', id: 3, delay: '1000ms', textEng: 'text for tooltip' },
+    { title: 'Typescript', id: 4, delay: '1300ms', textEng: 'text for tooltip' },
+    { title: 'Javascript', id: 5, delay: '1600ms', textEng: 'text for tooltip' },
+    { title: 'React-router', id: 6, delay: '1900ms', textEng: 'text for tooltip' },
+    { title: 'Redux & Context', id: 7, delay: '2200ms', textEng: 'text for tooltip' },
+    { title: 'Firebase SDK', id: 8, delay: '2500ms', textEng: 'text for tooltip' },
+    { title: 'Sass / Less', id: 9, delay: '2800ms', textEng: 'text for tooltip' },
+    { title: 'Webpack', id: 10, delay: '3100ms', textEng: 'text for tooltip' },
+    { title: 'CSS / HTML', id: 11, delay: '3400ms', textEng: 'text for tooltip' },
+    { title: 'Git / Git-hub', id: 12, delay: '3700ms',  textEng: 'text for tooltip' },
+    { title: 'Bootstrap', id: 13, delay: '4000ms', textEng: 'text for tooltip' },
+    { title: 'npm & yarn', id: 14, delay: '4300ms', textEng: 'text for tooltip' },
+];

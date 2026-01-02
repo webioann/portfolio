@@ -1,0 +1,5 @@
+{
+    "editor.minimap.autohide": "mouseover",
+    "editor.minimap.enabled": false,
+    "editor.mouseWheelZoom": false
+}
